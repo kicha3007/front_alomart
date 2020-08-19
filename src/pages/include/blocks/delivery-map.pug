@@ -1,0 +1,18 @@
+mixin delivery-map(data)
+	section.delivery-map.delivery-map_indent_bottom&attributes(attributes)
+		.delivery-map__container
+			.delivery-map__wrap
+				.delivery-map__column.delivery-map__column_pos_1
+					.delivery-map__content
+						.delivery-map__title Самовывоз
+						.delivery-map__location
+							.delivery-map__location-img-box
+								img.delivery-map__location-img(src="assets/img/logo_metro.png", alt='')
+							.delivery-map__location-text Преображенская площадь
+						.delivery-map__adress
+							| ул. Краснобогатырская, дом. 6, стр. 5, БЦ Вилла Рива
+						a.delivery-map__phone(href="tel:+74951059117﻿﻿﻿﻿") +7 (495) 105-91-17﻿﻿﻿﻿
+						.delivery-map__time Ежедневно с 9.00 до 21.00
+
+				.delivery-map__column.delivery-map__column_pos_2
+					.delivery-map__map

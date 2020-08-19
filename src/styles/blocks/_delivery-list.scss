@@ -1,0 +1,54 @@
+.delivery-list {
+  &__wrap {
+    padding: 15px 28px 40px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+  }
+
+  &__inner-wrap {
+    columns: 4 24px;
+    @include phones {
+      columns: 2 24px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 9px;
+
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #c4c4c4;
+    margin-bottom: 9px;
+  }
+
+  &__list {
+  }
+
+  &__inner-item {
+    margin-bottom: 2px;
+    position: relative;
+    padding-right: 8px;
+
+    &.active::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 9px;
+      right: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #204ba0;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+  }
+}

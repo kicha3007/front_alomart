@@ -1,0 +1,45 @@
+.delivery-list-distance {
+  &__wrap {
+    padding: 15px 28px 40px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+  }
+
+  &__inner-wrap {
+    columns: 2 60px;
+    margin: 0 -30px ;
+    @include phones {
+      columns: 1;
+    } margin: 0  ;
+  }
+
+  &__item {
+
+    display: flex;
+    margin: 0 30px 9px;
+    @include phones {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+  }
+  &__item-column {
+    &_pos_1 {
+      width: 75%;
+
+
+    }
+    &_pos_2 {
+      width: 25%;
+
+
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #000000;
+  }
+}

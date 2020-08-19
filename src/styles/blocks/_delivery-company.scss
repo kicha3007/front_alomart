@@ -1,0 +1,53 @@
+.delivery-company {
+  &_indent_top {
+    margin-top: 30px;
+  }
+  &__wrap {
+    display: flex;
+    margin: 0 -15px 20px;
+
+    @include tablets {
+      margin: 0 -10px 20px;
+
+    }
+    @include phones {
+      margin: 0 -5px 20px;
+    }
+
+  }
+  &__item {
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    background: #F0F0F0;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablets {
+      margin: 0 10px;
+      width: calc(25% - 20px);
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @include phones {
+      margin: 0 5px;
+      width: calc(25% - 10px);
+    }
+
+  }
+  &__img-box {
+    overflow: hidden;
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__note {
+    text-align: right;
+    font-size: 12px;
+    line-height: 15px;
+    color: #999999;
+  }
+}
+

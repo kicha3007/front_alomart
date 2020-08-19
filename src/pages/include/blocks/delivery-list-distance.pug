@@ -1,0 +1,12 @@
+mixin delivery-list-distance(data)
+	section.delivery-list-distance.delivery-list-distance_indent_top&attributes(attributes)
+		.delivery-list-distance__container
+			.delivery-list-distance__wrap
+				.delivery-list-distance__inner-wrap
+					each item in deliveryListDistanceList
+						.delivery-list-distance__item
+							.delivery-list-distance__item-column.delivery-list-distance__item-column_pos_1
+								.delivery-list-distance__text #{item.title}
+							.delivery-list-distance__item-column.delivery-list-distance__item-column_pos_2
+								.delivery-list-distance__text #{item.distance}
+

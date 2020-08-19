@@ -1,0 +1,32 @@
+mixin delivery-day(data)
+	section.delivery-day.delivery-day_indent_top.delivery-day_indent_bottom&attributes(attributes)
+		.delivery-day__container
+			.delivery-day__main-title Стоимости и сроки доставки по Москве и МО
+			.delivery-day__wrap
+				.delivery-day__item
+					.delivery-day__inner-wrap
+						.delivery-day__column.delivery-day__column_pos_1
+							.delivery-day__content
+								.delivery-day__title
+									| Доставка
+									br
+									| в день заказа
+								.delivery-day__desc
+									| При заказе на сайте до 17:00
+						.delivery-day__column.delivery-day__column_pos_2
+							.delivery-day__img-box
+								img.delivery-day__img(src="assets/img/delivery-day_1.png", alt='')
+
+				.delivery-day__item
+					.delivery-day__inner-wrap
+						.delivery-day__column.delivery-day__column_pos_1
+							.delivery-day__content
+								.delivery-day__title
+									| Доставка дешевле
+								.delivery-day__desc
+									| Просто, получите заказ
+									br
+									| на следующий день
+						.delivery-day__column.delivery-day__column_pos_2
+							.delivery-day__img-box
+								img.delivery-day__img(src="assets/img/delivery-day_2.png", alt='')

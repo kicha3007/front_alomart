@@ -1,0 +1,7 @@
+mixin main-search(data)
+	form.main-search&attributes(attributes)
+		.main-search__wrap
+			.main-search__input-wrap
+				input.main-search__input( placeholder=data.title)
+			button.main-search__btn
+				img.main-search__btn-img(src="assets/img/main-search-icon.svg", alt='')

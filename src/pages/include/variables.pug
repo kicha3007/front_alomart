@@ -1,0 +1,554 @@
+//- если нужно задать особое поведение/стиль какому-либо элементу используем ключ modifier и в шаблоне прописываем как модификатор
+-
+	var deliveryOtherList = [
+		{
+				title_1: "В день обращения",
+				title_2: "На следующий день",
+				head: "В пределах МКАД",
+				price_1: "<b>740 руб.</b>",
+				price_2: "<b>540 руб.</b>",
+		},
+		{
+				title_1: "В день обращения",
+				title_2: "На следующий день",
+				head: "До 10 км от МКАД",
+				price_1: "<b>1050 руб.</b>",
+				price_2: "<b>840 руб.</b>",
+		},
+		{
+				title_1: "В день обращения",
+				title_2: "На следующий день",
+				head: "От 10 км от МКАД",
+				price_1: "<b>1050 руб. </b>+ 30 руб. за каждый км",
+				price_2: "<b>840 руб. </b>+ 30 руб. за каждый км",
+		},
+	]
+
+		deliveryListList = [
+			{
+				"title": "А",
+				"items": [
+					{
+					"name": "Абакан",
+					"active": false
+					},
+					{
+					"name": "Анадырь",
+					"active": false
+					},
+					{
+					"name": "Архангельск",
+					"active": false
+					},
+					{
+					"name": "Астрахань",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Б",
+				"items": [
+					{
+					"name": "Барнаул",
+					"active": true
+					},
+					{
+					"name": "Белгород",
+					"active": false
+					},
+					{
+					"name": "Биробиджан",
+					"active": false
+					},
+					{
+					"name": "Благовещенск",
+					"active": false
+					},
+					{
+					"name": "Брянск",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "В",
+				"items": [
+					{
+					"name": "Великий Новгород",
+					"active": false
+					},
+					{
+					"name": "Владивосток",
+					"active": false
+					},
+					{
+					"name": "Владикавказ",
+					"active": false
+					},
+					{
+					"name": "Владимир",
+					"active": false
+					},
+					{
+					"name": "Волгоград",
+					"active": false
+					},
+					{
+					"name": "Вологда",
+					"active": true
+					},
+					{
+					"name": "Воронеж",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Г",
+				"items": [
+					{
+					"name": "Грозный",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Е",
+				"items": [
+					{
+					"name": "Евпатория",
+					"active": false
+					},
+					{
+					"name": "Екатеринбург",
+					"active": true
+					}
+				]
+			},
+			{
+				"title": "И",
+				"items": [
+					{
+					"name": "Иваново",
+					"active": false
+					},
+					{
+					"name": "Ижевск",
+					"active": false
+					},
+					{
+					"name": "Иркутск",
+					"active": true
+					}
+				]
+			},
+			{
+				"title": "К",
+				"items": [
+					{
+					"name": "Казань",
+					"active": true
+					},
+					{
+					"name": "Калининград",
+					"active": false
+					},
+					{
+					"name": "Калуга",
+					"active": false
+					},
+					{
+					"name": "Кемерово",
+					"active": false
+					},
+					{
+					"name": "Киров",
+					"active": false
+					},
+					{
+					"name": "Кострома",
+					"active": false
+					},
+					{
+					"name": "Краснодар",
+					"active": true
+					},
+					{
+					"name": "Красноярск",
+					"active": true
+					},
+					{
+					"name": "Курган",
+					"active": false
+					},
+					{
+					"name": "Курск",
+					"active": false
+					},
+					{
+					"name": "Кызыл",
+					"active": false
+					},
+				]
+			},
+			{
+				"title": "Л",
+				"items": [
+					{
+					"name": "Л",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "М",
+				"items": [
+					{
+					"name": "Магадан",
+					"active": false
+					},
+					{
+					"name": "Магас",
+					"active": false
+					},
+					{
+					"name": "Майкоп",
+					"active": false
+					},
+					{
+					"name": "Махачкала",
+					"active": false
+					},
+					{
+					"name": "Москва",
+					"active": false
+					},
+					{
+					"name": "Мурманск",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Н",
+				"items": [
+					{
+					"name": "Назрань",
+					"active": false
+					},
+					{
+					"name": "Нальчик",
+					"active": false
+					},
+					{
+					"name": "Нижний Новгород",
+					"active": true
+					},
+					{
+					"name": "Нижний Тагил",
+					"active": false
+					},
+					{
+					"name": "Новокузнецк ",
+					"active": false
+					},
+					{
+					"name": "Новороссийск",
+					"active": false
+					},
+					{
+					"name": "Новосибирск",
+					"active": false
+					},
+					{
+					"name": "Новочебоксарск",
+					"active": false
+					},
+					{
+					"name": "Новый Уренгой",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "О",
+				"items": [
+					{
+					"name": "Омск",
+					"active": false
+					},
+					{
+					"name": "Оренбург",
+					"active": false
+					},
+					{
+					"name": "Орёл",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "П",
+				"items": [
+					{
+					"name": "Пенза",
+					"active": false
+					},
+					{
+					"name": "Пенза",
+					"active": false
+					},
+					{
+					"name": "Петрозаводск",
+					"active": false
+					},
+					{
+					"name": "Петропавловск-\n" +
+							"Камчатский",
+					"active": false
+					},
+					{
+					"name": "Псков",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Р",
+				"items": [
+					{
+					"name": "Ростов-на-Дону",
+					"active": false
+					},
+					{
+					"name": "Рязань",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "С",
+				"items": [
+					{
+					"name": "Салехард",
+					"active": false
+					},
+					{
+					"name": "Самара",
+					"active": false
+					},
+					{
+					"name": "Санкт-Петербург ",
+					"active": false
+					},
+					{
+					"name": "Саранск",
+					"active": false
+					},
+					{
+					"name": "Севастополь",
+					"active": false
+					},
+					{
+					"name": "Симферополь",
+					"active": true
+					},
+					{
+					"name": "Смоленск",
+					"active": false
+					},
+					{
+					"name": "Сочи",
+					"active": false
+					},
+					{
+					"name": "Ставрополь",
+					"active": false
+					},
+					{
+					"name": "Стерлитамак",
+					"active": false
+					},
+					{
+					"name": "Сургут",
+					"active": false
+					},
+					{
+					"name": "Сыктывкар",
+					"active": false
+					},
+				]
+			},
+			{
+				"title": "Т",
+				"items": [
+					{
+					"name": "Тамбов",
+					"active": false
+					},
+					{
+					"name": "Тверь",
+					"active": false
+					},
+					{
+					"name": "Тольятти",
+					"active": false
+					},
+					{
+					"name": "Томск",
+					"active": false
+					},
+					{
+					"name": "Тула",
+					"active": false
+					},
+					{
+					"name": "Тюмень",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "У",
+				"items": [
+					{
+					"name": "Улан-Удэ",
+					"active": false
+					},
+					{
+					"name": "Ульяновск",
+					"active": false
+					},
+					{
+					"name": "Уфа",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Х",
+				"items": [
+					{
+					"name": "Хабаровск",
+					"active": true
+					},
+					{
+					"name": "Хабаровск",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Ч",
+				"items": [
+					{
+					"name": "Чебоксары",
+					"active": false
+					},
+					{
+					"name": "Челябинск",
+					"active": false
+					},
+					{
+					"name": "Черкесск",
+					"active": false
+					},
+					{
+					"name": "Чита",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Э",
+				"items": [
+					{
+					"name": "Элиста",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Ю",
+				"items": [
+					{
+					"name": "Южно-Сахалинск",
+					"active": false
+					}
+				]
+			},
+			{
+				"title": "Я",
+				"items": [
+					{
+					"name": "Якутск",
+					"active": false
+					},
+					{
+					"name": "Ярославль",
+					"active": false
+					}
+				]
+			},
+
+		]
+
+	deliveryListDistanceList = [
+		{
+			"title": "Балашиха",
+			"distance": "21 км\n",
+		},
+		{
+			"title": "Видное ",
+			"distance": "26 км\n",
+		},
+		{
+			"title": "Долгопрудный ",
+			"distance": "25 км\n ",
+		},
+		{
+			"title": "Домодедово",
+			"distance": "39 км\n",
+		},
+		{
+			"title": "Жуковский\n",
+			"distance": "39 км\n",
+		},
+		{
+			"title": "Зеленоград ",
+			"distance": "45 км\n",
+		},
+		{
+			"title": "Коломна \n",
+			"distance": "108 км\n",
+		},
+		{
+			"title": "Королев ",
+			"distance": "28 км\n",
+		},
+		{
+			"title": "Мытищи ",
+			"distance": "24 км\n",
+		},
+		{
+			"title": "Одинцово\n",
+			"distance": "25 км\n",
+		},
+		{
+			"title": "Подольск ",
+			"distance": "37 км\n",
+		},
+		{
+			"title": "Раменское",
+			"distance": "50 км\n",
+		},
+		{
+			"title": "Сергиев Посад ",
+			"distance": "74 км\n",
+		},
+		{
+			"title": "Серпухов ",
+			"distance": "02 км\n",
+		}
+	]

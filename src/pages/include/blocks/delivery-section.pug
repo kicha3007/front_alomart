@@ -1,0 +1,17 @@
+include main-search
+include delivery-list
+
+mixin delivery-section(data)
+	section.delivery-section.delivery-section_indent_bottom&attributes(attributes)
+		.delivery-section__container
+			.delivery-section__wrap
+				.delivery-section__column.delivery-section__column_pos_1
+					.delivery-section__main-title Доставка по России
+					.delivery-section__search
+						+main-search({"title": "Абакан"})
+					.delivery-section__note
+						|Если Вы не нашли Ваш город в списке, Вы можете задать любые вопросы по телефону
+						a(href="tel:74951059117") &#32; +7 (495) 105-91-17
+				.delivery-section__column.delivery-section__column_pos_2
+					+delivery-list()
+

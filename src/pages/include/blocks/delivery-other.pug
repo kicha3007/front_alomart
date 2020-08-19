@@ -1,0 +1,25 @@
+mixin delivery-other(data)
+	section.delivery-other.delivery-other_indent_bottom&attributes(attributes)
+		.delivery-other__container
+			.delivery-other__wrap
+				each item, indx in deliveryOtherList
+					- showMobile = indx !== 0 ? "delivery-other__column_show_mobile" : ""
+					- showMobileItemFirst = indx == 0 ? "delivery-other__item_pos_first" : ""
+					- showMobileColumnFirst = indx == 0 ? "delivery-other__column_pos_first" : ""
+					.delivery-other__item(class=showMobileItemFirst)
+						.delivery-other__row.delivery-other__row_head
+							.delivery-other__column.delivery-other__column_pos_1.delivery-other__column_head.delivery-other__column_blank(class=showMobile + " " + showMobileColumnFirst)
+								span.delivery-other__text-head
+							.delivery-other__column.delivery-other__column_pos_2.delivery-other__column_head
+								span.delivery-other__text-head !{item.head}
+						.delivery-other__row.delivery-other__row_title
+							.delivery-other__column.delivery-other__column_pos_1.delivery-other__column_title(class=showMobile)
+								span.delivery-other__text !{item.title_1}
+							.delivery-other__column.delivery-other__column_pos_2
+								span.delivery-other__text !{item.price_1}
+						.delivery-other__row
+							.delivery-other__column.delivery-other__column_pos_1.delivery-other__column_title(class=showMobile)
+								span.delivery-other__text !{item.title_2}
+							.delivery-other__column.delivery-other__column_pos_2
+								span.delivery-other__text !{item.price_2}
+

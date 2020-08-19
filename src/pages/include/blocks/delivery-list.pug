@@ -1,0 +1,14 @@
+mixin delivery-list(data)
+	section.delivery-list.delivery-list_indent_top&attributes(attributes)
+		.delivery-list__container
+			.delivery-list__wrap
+				.delivery-list__inner-wrap
+					each item in deliveryListList
+						.delivery-list__item
+							.delivery-list__title !{item.title}
+							.delivery-list__list
+								each innerItem in item.items
+									- active = innerItem.active ? "active": ""
+									.delivery-list__inner-item(class=active)
+										a(href="#").delivery-list__link  #{innerItem.name}
+

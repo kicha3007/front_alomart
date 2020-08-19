@@ -1,0 +1,14 @@
+include main-search
+include delivery-list-distance
+
+mixin delivery-section-distance(data)
+	section.delivery-section-distance.delivery-section-distance_indent_bottom&attributes(attributes)
+		.delivery-section-distance__container
+			.delivery-section-distance__wrap
+				.delivery-section-distance__column.delivery-section-distance__column_pos_1
+					.delivery-section-distance__main-title Расстояния от центра Москвы до крупных городов МО
+					.delivery-section-distance__search
+						+main-search({"title": "Балашиха"})
+				.delivery-section-distance__column.delivery-section-distance__column_pos_2
+					+delivery-list-distance()
+
