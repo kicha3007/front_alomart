@@ -1,0 +1,144 @@
+.top-screen {
+  &_indent_top {
+    margin-top: 27px;
+  }
+  &__wrap {
+    display: flex;
+    margin: 0 -15px;
+    @include tablets {
+      margin: 0;
+    }
+
+  }
+
+  &__column {
+    margin: 0 15px;
+
+
+    &_pos_1 {
+      flex-basis: calc(75% - 30px);
+      @include tablets {
+        flex-basis: 100%;
+        margin: 0;
+      }
+      
+
+
+    }
+
+    &_pos_2 {
+      min-width: 252px;
+
+      flex-basis: calc(25% - 30px);
+      @include tablets {
+          display: none;
+      }
+
+
+    }
+  }
+
+  &__img-box {
+    overflow: hidden;
+    
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+  &__top {
+    margin-bottom: 20px;
+
+  }
+  &__certificate-img-box {
+
+  }
+  &__certificate-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+  &__certificate-bottom {
+    background: #204BA0;
+    display: flex;
+    padding: 5px  17px 8px   20px ;
+    position: absolute;
+    bottom: 0;
+
+  }
+  &__certificate {
+    position: relative;
+  }
+  &__certificate-icon-box {
+    overflow: hidden;
+    margin-top: -20px;
+
+  }
+  &__certificate-icon {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+  &__certificate-desc {
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-right: 20px;
+
+  }
+  &__bottom {
+
+
+
+
+  }
+  &__delivery {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 43px;
+    padding-bottom: 44px;
+    background: #F15735;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -16px;
+      left: 69px;
+      border-radius: 50%;
+      background: #e93f19;
+      width: 231px;
+      height: 231px;
+    }
+
+  }
+  &__content {
+    z-index: 5;
+  }
+  &__delivery-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 10px;
+    color: #fff;
+
+
+
+  }
+  &__delivery-desc {
+    font-size: 11px;
+    line-height: 18px;
+    color: #ffffff;
+
+  }
+
+}

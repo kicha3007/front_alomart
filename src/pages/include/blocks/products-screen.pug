@@ -1,0 +1,17 @@
+mixin products-screen(data)
+	section.products-screen.products-screen_indent_bottom&attributes(attributes)
+		.products-screen__container
+			.products-screen__wrap
+				each item in productsScreenList
+
+					-
+						var size = (typeof item.size !== 'undefined' && item.size !== "") ?
+								{
+								"item": "products-screen__item_size_25" ,
+								"img_box": "products-screen__img-box_size_25",
+								"title": "products-screen__title_size_25"} : ""
+					.products-screen__item(class=size.item)
+						.products-screen__content
+							.products-screen__img-box(class=size.img_box)
+								img.products-screen__img(src=item.img, alt='' )
+							.products-screen__title(class=size.title) !{item.title}

@@ -1,0 +1,34 @@
+extend include/template_base
+
+block variables
+	-
+		var title = 'Лэндинг';
+
+	include include/blocks/main-screen
+	include include/blocks/delivery-company
+	include include/blocks/delivery-day
+	include include/blocks/delivery-price
+	include include/blocks/delivery-other
+	include include/blocks/delivery-section
+	include include/blocks/delivery-section-distance
+	include include/blocks/delivery-map
+
+
+block content
+	.main-container
+		.page
+			.page__wrapper_inner
+				.page__sidebar
+				.page__content
+					+main-screen(class="")
+					+delivery-company()
+					+delivery-day()
+					+delivery-price()
+					+delivery-other()
+					+delivery-section()
+					+delivery-section-distance()
+					+delivery-map()
+
+
+
+

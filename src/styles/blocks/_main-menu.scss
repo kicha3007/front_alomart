@@ -1,0 +1,212 @@
+.main-menu {
+  max-width: 660px;
+
+  &__container {
+  }
+
+  &__wrap {
+    display: flex;
+    background: #ffffff;
+    @include phones {
+        margin: 0 -15px;
+    }
+  }
+
+  &__column {
+
+    &_pos_1 {
+      flex-basis: 195px;
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+      @include phones {
+          flex-basis: 153px;
+        flex-shrink: 0;
+      }
+    }
+
+    &_pos_2 {
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+      flex-grow: 1;
+   
+    }
+  }
+
+  &__list {
+    @include phones {
+      padding-left: 10px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    border-bottom: 1px solid rgba(229, 229, 229, .5);
+  }
+
+  &__link {
+    padding: 11px 25px;
+    display: block;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.42;
+
+    width: 100%;
+    color: #000000;
+    @include phones {
+      padding: 11px 15px;
+      padding-right: 5px;
+
+    }
+  }
+
+  &__top {
+    padding: 16px 25px 35px 40px;
+    border-bottom: 1px solid rgba(229, 229, 229, .5);
+  @include phones {
+    padding-bottom: 5px;
+    border: none;
+  }
+  }
+
+  &__inner-wrap {
+  }
+
+  &__submenu {
+  }
+
+  &__submenu-column {
+    &_pos_1 {
+      flex-grow: 1;
+      padding-right: 15px;
+
+    }
+
+    &_pos_2 {
+      width: 150px;
+      flex-shrink: 1;
+
+      min-height: 300px;
+      min-width: 1px;
+      @include phones {
+          display: none;
+      }
+      
+    }
+  }
+
+  &__content {
+  }
+
+  &__submenu-title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+
+  &__submenu-list {
+  }
+
+  &__submenu-item {
+    display: none;
+    &.active {
+      display: flex;
+    }
+
+  }
+  &__submenu-inner-item {
+    margin-bottom: 4px;
+  }
+
+  &__submenu-link {
+    font-weight: 300;
+    font-size: 10px;
+    color: #000000;
+
+  }
+
+  &__product {
+    display: none;
+    &_active_product {
+
+        display: block;
+
+
+    }
+  }
+
+  &__product-wrap {
+  }
+
+  &__product-title {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+
+  &__product-item {
+    min-height: 257px;
+    width: 100%;
+    background: grey;
+  }
+
+  &__bottom {
+    padding: 40px 15px 25px 40px;
+    @include phones {
+      padding: 3px 15px 25px 40px;
+    }
+  }
+
+  &__bottom-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include phones {
+        flex-wrap: wrap;
+    }
+  }
+
+  &__bottom-column {
+    &_pos_1 {
+      padding-right: 10px;
+      @include phones {
+        margin-bottom: 14px;
+        padding-right: 0;
+      }
+    }
+
+    &_pos_2 {
+    }
+  }
+
+  &__bottom-text {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #204ba0;
+    @include phones {
+      font-size: 9px;
+    }
+  }
+
+  &__phone {
+    background: #f0f0f0;
+    padding: 7px 16px 9px;
+    @include phones {
+      padding: 1px 17px 2px;
+      width: 100%;
+    }
+  }
+
+  &__phone-text {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #204ba0;
+    white-space: nowrap;
+    @include phones {
+      font-size: 10px;
+    }
+  }
+}

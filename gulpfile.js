@@ -14,11 +14,15 @@ const babel = require('gulp-babel');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const pug = require('gulp-pug');
+const rename = require('gulp-rename');
+const gulpif = require('gulp-if');
+const env = process.env.NODE_ENV;
 
 const {DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS} = require('./gulp.config');
 sass.compiler = require('node-sass');
 
 task('clean', () => {
+    console.log(env);
     return src(`${DIST_PATH}/**/*`, {read: false}).pipe(rm());
 });
 
@@ -27,6 +31,9 @@ task('compile:pug', () => {
         .pipe(pug({
             pretty: true
         }))
+        .pipe(gulpif(env === "prod", rename(function (path) {
+            path.extname = ".php"
+        })))
         .pipe(dest(DIST_PATH))
         .pipe(reload({stream: true}));
 });
@@ -157,3 +164,10 @@ task('default',
         parallel('watch', 'server')
     )
 );
+
+task('build',
+    series('clean',
+        parallel('compile:pug', 'styles', 'scripts', 'icons', 'copy:img', 'copy:fonts', 'copy:js'),
+    )
+);
+

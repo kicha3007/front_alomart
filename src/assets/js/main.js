@@ -73,6 +73,18 @@ function DOMready() {
         desc.data("reviews-ya-desc", text);
     });
 
+    $("[data-main-menu-item]").mouseenter(function () {
+        var $this = $(this);
+        var id = $this.data("main-menu-item");
+        var wrap = $this.closest("[data-main-menu-wrap]");
+        var items = wrap.find("[data-main-menu-submenu-item]");
+        items.removeClass("active");
+        wrap.find("#" + id).addClass("active");
+        console.log( wrap.find("#" + id));
+
+
+    });
+
 
 
 

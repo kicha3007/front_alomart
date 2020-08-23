@@ -1,0 +1,36 @@
+mixin top-screen(data, mods)
+	section.top-screen.top-screen_indent_top&attributes(attributes)
+		.top-screen__container
+			.top-screen__wrap
+				.top-screen__column.top-screen__column_pos_1
+					.top-screen__img-box
+						img.top-screen__img(src="assets/img/main/c/main-screen_two.jpg", alt='')
+
+				.top-screen__column.top-screen__column_pos_2
+					.top-screen__top
+						.top-screen__certificate
+							.top-screen__certificate-img-box
+								img.top-screen__certificate-img(src="assets/img/main/main-screen_2.jpg", alt='')
+							.top-screen__certificate-bottom
+								.top-screen__certificate-desc
+									| только
+									br
+									| сертифицированная
+									br
+									|	продукия
+								.top-screen__certificate-icon-box
+									img.top-screen__certificate-icon(src="assets/img/main/main-screen_1.svg", alt='')
+
+					.top-screen__bottom
+						.top-screen__delivery
+							.top-screen__content
+								.top-screen__delivery-title
+									| Доставка
+									br
+									| в день заказа?
+								.top-screen__delivery-desc
+									| Сделай заказ на сайте до 17:00,
+									br
+									| и получи свой заказ в тот же день!
+
+

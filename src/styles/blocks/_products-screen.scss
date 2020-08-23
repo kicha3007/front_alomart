@@ -1,0 +1,110 @@
+.products-screen {
+  &_indent_bottom {
+    margin-bottom: 45px;
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+    @include tablets {
+      margin: 0 -10px -20px;
+    }
+    @include phones {
+      margin: 0 0 -17px;
+    }
+
+  }
+  &__item {
+    margin: 0 15px 30px;
+    width: calc(50% - 30px);
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    background: #F0F0F0;
+    display: flex;
+    align-items: center;
+    @include tablets {
+      width: calc(33.333333% - 20px);
+      margin: 0 10px 20px;
+      padding-left: 25px;
+    }
+    @include phones {
+      margin: 0 0 17px;
+      width: 100%;
+      padding-left: 35px;
+    }
+    &_size_25 {
+      width: calc(25% - 30px);
+      padding-left: 30px;
+      @include tablets {
+        width: calc(33.333333% - 20px);
+        padding-left: 25px;
+      }
+      @include phones {
+        margin: 0 0 17px;
+        width: 100%;
+        padding-left: 35px;
+      }
+
+
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__img-box {
+    margin-right: 50px;
+    @include tablets {
+        max-width: 55px;
+      margin-right: 20px;
+    }
+    @include phones {
+      margin-right: 50px;
+    }
+    &_size_25 {
+      margin-right: 30px;
+      @include tablets {
+        max-width: 55px;
+        margin-right: 20px;
+      }
+      @include phones {
+        margin-right: 50px;
+      }
+
+
+    }
+
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #002C83;
+    @include tablets {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &_size_25 {
+
+      font-size: 14px;
+      line-height: 17px;
+
+    }
+
+
+  }
+
+
+
+}

@@ -1,0 +1,42 @@
+mixin main-menu(data)
+	section.main-menu&attributes(attributes)
+		.main-menu__container
+			.main-menu__wrap(data-main-menu-wrap)
+				.main-menu__column.main-menu__column_pos_1
+					.main-menu__list
+						each item in mainMenuList
+							.main-menu__item(data-main-menu-item=item.id)
+								a(href="#" ).main-menu__link !{item.title}
+
+				.main-menu__column.main-menu__column_pos_2
+					.main-menu__top
+						.main-menu__inner-wrap
+							.main-menu__submenu
+								each item, indx in mainMenuList
+									- active = indx === 2 ? "active" : ""
+									- active_product = (typeof item.active_product !== "undefined" && item.active_product !== false) ? "main-menu__product_active_product": ""
+									.main-menu__submenu-item(class=active id=item.id data-main-menu-submenu-item)
+										.main-menu__submenu-column.main-menu__submenu-column_pos_1
+											.main-menu__content
+												.main-menu__submenu-title !{item.title}
+												.main-menu__submenu-list
+													each innerItem in item.items
+														.main-menu__submenu-inner-item
+																a(href="#").main-menu__submenu-link !{innerItem.title}
+										.main-menu__submenu-column.main-menu__submenu-column_pos_2
+											.main-menu__product(class=active_product)
+												.main-menu__product-wrap
+													.main-menu__product-title Товар месяца
+													.main-menu__product-item
+
+					.main-menu__bottom
+						.main-menu__bottom-wrap
+							.main-menu__bottom-column.main-menu__bottom-column_pos_1
+								.main-menu__bottom-text
+									| Не нашли то, что искали?
+									br
+									| Обращайтесь к нашим консультантам
+
+							.main-menu__bottom-column.main-menu__bottom-column_pos_2
+								a.main-menu__phone(href="tel:74951059117")
+									span.main-menu__phone-text +7 (495) 105-91-17

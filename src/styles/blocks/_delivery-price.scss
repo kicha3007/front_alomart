@@ -5,6 +5,7 @@
   &__wrap {
     display: flex;
     margin: 0 -18px;
+    justify-content: center;
     @include phones {
         flex-wrap: wrap;
       margin: 0;
